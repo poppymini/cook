@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>购物车</title>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/bases.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/index.css" type="text/css" rel="stylesheet" media="all">
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+</head>
+<body>
+		<!--header-->
+	<div class="header">
+		<div class="container">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<h1 class="navbar-brand"><a  href="index.html">Angular</a></h1>
+				</div>
+				<!--navbar-header-->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="index.html" class="active">首页</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown">全部商品<b class="caret"></b></a>
+							<ul class="dropdown-menu multi-column columns-4">
+								<div class="row">
+									<div class="col-sm-3">
+										<h4>适合人群</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="products.html">朋友</a></li>
+											<li><a class="list" href="products.html">爱人</a></li>
+											<li><a class="list" href="products.html">姐妹</a></li>
+											<li><a class="list" href="products.html">兄弟</a></li>
+											<li><a class="list" href="products.html">孩子</a></li>
+											<li><a class="list" href="products.html">父母</a></li>
+										</ul>
+									</div>																		
+									<div class="col-sm-3">
+									    <h4>口味</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="products.html">巧克力e</a></li>
+											<li><a class="list" href="products.html">慕斯 Fruit</a></li>
+											<li><a class="list" href="products.html">奶油糖果</a></li>
+											<li><a class="list" href="products.html">奶油草莓</a></li>
+											<li><a class="list" href="products.html">香草</a></li>
+											<li><a class="list" href="products.html">香草蛋糕</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-3">
+										<h4>主题</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="products.html">心心相印</a></li>
+											<li><a class="list" href="products.html">层级蛋糕</a></li>
+											<li><a class="list" href="products.html">2-3层</a></li>
+											<li><a class="list" href="products.html">圆形</a></li>
+											<li><a class="list" href="products.html">方形</a></li>
+											<li><a class="list" href="products.html">照片墙</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-3">
+										<h4>尺寸</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="products.html">1 kG</a></li>
+											<li><a class="list" href="products.html">1.5 kG</a></li>
+											<li><a class="list" href="products.html">2 kG</a></li>
+											<li><a class="list" href="products.html">3 kG</a></li>
+											<li><a class="list" href="products.html">4 kG</a></li>
+											<li><a class="list" href="products.html">更大</a></li>
+										</ul>
+									</div>
+								</div>
+							</ul>
+						</li>
+					   <li class="dropdown grid">
+							<a  class="dropdown-toggle list1" data-toggle="dropdown">婚宴蛋糕<b class="caret"></b></a>
+							<ul class="dropdown-menu multi-column columns-4">
+								<div class="row">
+									<div class="col-sm-4">
+										<h4>口味</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="products.html">巧克力e</a></li>
+											<li><a class="list" href="products.html">慕斯 Fruit</a></li>
+											<li><a class="list" href="products.html">奶油糖果</a></li>
+											<li><a class="list" href="products.html">奶油草莓</a></li>
+											<li><a class="list" href="products.html">香草</a></li>
+											<li><a class="list" href="products.html">香草蛋糕</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-4">
+											<h4>主题</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="products.html">心心相印</a></li>
+											<li><a class="list" href="products.html">层级蛋糕</a></li>
+											<li><a class="list" href="products.html">2-3层</a></li>
+											<li><a class="list" href="products.html">圆形</a></li>
+											<li><a class="list" href="products.html">方形</a></li>
+											<li><a class="list" href="products.html">照片墙</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-4">
+										<h4>尺寸</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="products.html">1 kG</a></li>
+											<li><a class="list" href="products.html">1.5 kG</a></li>
+											<li><a class="list" href="products.html">2 kG</a></li>
+											<li><a class="list" href="products.html">3 kG</a></li>
+											<li><a class="list" href="products.html">4 kG</a></li>
+											<li><a class="list" href="products.html">更大</a></li>
+										</ul>
+									</div>
+								</div>
+							</ul>
+						</li>				
+						<li class="dropdown grid">
+							<a  class="dropdown-toggle list1" data-toggle="dropdown">特价商品 <b class="caret"></b></a>
+							<ul class="dropdown-menu multi-column columns-4">
+								<div class="row">								
+									<div class="col-sm-6">
+										<h4>口味</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="products.html">香草</a></li>
+											<li><a class="list" href="products.html">水果</a></li>
+											<li><a class="list" href="products.html">奶油</a></li>
+											<li><a class="list" href="products.html">草莓</a></li>
+											<li><a class="list" href="products.html">拼盘</a></li>
+											<li><a class="list" href="products.html">纯奶油蛋糕</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6">
+										<h4>尺寸</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="products.html">1 kG</a></li>
+											<li><a class="list" href="products.html">1.5 kG</a></li>
+											<li><a class="list" href="products.html">2 kG</a></li>
+											<li><a class="list" href="products.html">3 kG</a></li>
+											<li><a class="list" href="products.html">4 kG</a></li>
+											<li><a class="list" href="products.html">更大</a></li>
+										</ul>
+									</div>
+								</div>
+							</ul>
+						</li>
+						<li class="dropdown grid">
+							<a class="dropdown-toggle list1" data-toggle="dropdown">商店<b class="caret"></b></a>
+							<ul class="dropdown-menu multi-column columns-3">
+								<div class="row">
+									<div class="col-sm-4">
+										<h4>甜点</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="products.html">泡芙</a></li>
+											<li><a class="list" href="products.html">牛角包</a></li>
+											<li><a class="list" href="products.html">奶油包</a></li>
+											<li><a class="list" href="products.html">全麦</a></li>
+											<li><a class="list" href="products.html">甜甜圈</a></li>
+											<li><a class="list" href="products.html">巧克力</a></li>
+										</ul>
+									</div>						
+									<div class="col-sm-4">
+										<h4>饮料</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="products.html">巧克力牛奶</a></li>
+											<li><a class="list" href="products.html">鲜榨椰子汁</a></li>
+											<li><a class="list" href="products.html">新鲜柠檬水</a></li>
+											<li><a class="list" href="products.html">coffee</a></li>
+											<li><a class="list" href="products.html">珍珠奶茶</a></li>
+											<li><a class="list" href="products.html">缤纷香果</a></li>
+										</ul>
+									</div>								
+									<div class="col-sm-4">
+										<h4>更多推荐</h4>
+										<ul class="multi-column-dropdown">
+											<li><a class="list" href="products.html">冰淇淋蛋糕</a></li>
+											<li><a class="list" href="products.html">初恋</a></li>
+											<li><a class="list" href="products.html">香草之心</a></li>
+											<li><a class="list" href="products.html">熏衣香草</a></li>
+											<li><a class="list" href="products.html">提拉米苏</a></li>
+											<li><a class="list" href="products.html">缤纷玫瑰</a></li>										
+										</ul>
+									</div>
+								</div>
+							</ul>
+						</li>								
+					</ul> 
+					<!--/.navbar-collapse-->
+				</div>
+				<!--//navbar-header-->
+			</nav>
+			<div class="header-info">
+				<div class="header-right search-box">
+					<a><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>				
+					<div class="search">
+						<form class="navbar-form">
+							<input type="text" class="form-control">
+							<button type="submit" class="btn btn-default" aria-label="Left Align">
+								搜索
+							</button>
+						</form>
+					</div>	
+				</div>
+				<div class="header-right login">
+					<a><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+					<div id="loginBox">                
+						<form id="loginForm">
+							<fieldset id="body">
+								<fieldset>
+									<label for="email">邮箱</label>
+									<input type="text" name="email" id="email">
+								</fieldset>
+								<fieldset>
+									<label for="password">密码</label>
+									<input type="password" name="password" id="password">
+								</fieldset>
+								<input type="submit" id="login" value="登录">
+								<label for="checkbox"><input type="checkbox" id="checkbox"> <i style="font-style:normal;">记住我</i></label>
+							</fieldset>
+							<p>新人 ? <a class="sign" href="account.html">注册</a> <span><a href="#">忘记密码?</a></span></p>
+						</form>
+					</div>
+				</div>
+				<div class="header-right cart">
+					<a><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+					<div class="cart-box">
+						<h4><a href="checkout.html">
+							<span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0</span>) 
+						</a></h4>
+						<p><a href="javascript:;" class="simpleCart_empty">清空购物车</a></p>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!--//header-->
+	<!--cart-items-->
+	<div class="cart-items">
+		<div class="container">
+			<h2>My total shopping</h2>
+			<script>$(document).ready(function(c) {
+				$('.close1').on('click', function(c){
+					$('.cart-header').fadeOut('slow', function(c){
+						$('.cart-header').remove();
+					});
+					});	  
+				});
+			</script>
+			<div class="cart-header"  ng-repeat="val in shp">
+				<div class="close1" ng-click="remove(add.id)"></div>
+				<div class="cart-sec simpleCart_shelfItem" >
+					<div class="cart-item cyc">
+						 <img ng-src="{{val.img}}" class="img-responsive" alt="">
+					</div>
+					<div class="cart-item-info">
+						<h3><a href="#"> {{val.name}}</a><span>{{val.weight}}</span></h3>
+						<ul class="qty1">
+							<li><p>{{val.id}}</p></li>
+							<li><p>数量<button class="btn_a" ng-click="add(val.id,true)">+</button><span>{{val.num}}</span><button class="btn_a" ng-click="add(val.id,false)">-</button></p></li>
+						</ul>
+						<div class="clearfix"></div>
+						<div class="qty">
+							<p>{{val.price|currency:"¥"}}</p>
+							<p>{{val.num*val.price|currency:"¥"}}</p>
+						</div>
+						<div class="delivery">
+							<p><a href="" style="color:#999;">移动我的关注</a></p>
+							<span>订单之后大约两小时到达</span>
+							<div class="clearfix"></div>
+						</div>	
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div><a href="index.html" class="go_shop">&lt;&lt;继续逛</a>
+			<p class="buys">总价:{{totalPrice|currency:"¥"}}
+			<button class="btn btn-info ">立即购买</button></p></div>	
+		</div>
+	</div>
+	<!--footer-->
+	<!--底部开始-->
+<div class="container-fluid footer_list">
+   <div class="container">
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs">
+            <dl>
+             <dt>推荐产品</dt>
+             <dd><a href="#">慕斯蛋糕</a></dd>
+             <dd><a href="#">提拉米苏</a> </dd>
+             <dd><a href="#">COCOl</a></dd>
+             <dd><a href="#">Delicious</a></dd>
+            </dl>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs">
+         <dl>
+             <dt>在线购买</dt>
+             <dd><a href="">手机App</a></dd>
+             <dd><a href="">甜点</a></dd>
+             <dd><a href="">购买指南</a></dd>
+             <dd><a href="">百度糯米</a></dd>
+        </dl>
+        </div>
+       <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs">
+        <dl>
+            <dt>服务</dt>
+            <dd><a href="">连锁店查询</a></dd>
+            <dd><a href="">价格查询</a></dd>
+            <dd><a href="">服务</a></dd>
+            <dd><a href="">建议反馈</a></dd>
+        </dl>
+        </div>
+         <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs">
+            <dl>
+                <dt>关于我们</dt>
+                <dd><a href="">关于网店</a></dd>
+                <dd><a href="">加入我们</a></dd>
+                <dd><a href="">采购相关</a></dd>
+            </dl>
+        </div>
+           <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs last_foot">
+           <dl>
+            <dt><a href=""><img src="images/icon-online.png" alt=""></a></dt>
+            <dd ><span>4001-666-888</span</dd>
+            <dd ><p>( 24小时全国服务热线 )</p></dd>
+        </dl>
+        </div>
+        </div>
+        </div>
+</div>
+<div class="hr"></div>
+<!--最后列表开始-->
+<div class="container-fluid footer_info hidden-sm hidden-xs">
+   <div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-8  col-xs-12 foot_bot">
+           <p style="float:left;">© 2005 - 2017 东莞市永盛通信科技有限公司 版权所有 粤ICP备08130115号-1 联系方式：4001-666-888 </p>
+       <a href=""><button type="button" class="btn btn-default btn_b" data-toggle="tooltip" data-placement="top" title="企业名称：CC的蛋糕坊
+法定代表人：蔡才领
+标识状态：已激活 粤工商备E191512001248
+电子标识有效期：2015-12-14～2020-12-16"></button></a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12 footer_fl">
+           <span>关注我们 :</span>
+           <a href="" class="foot_t relative"></a>
+           <a href="" class="foot_r relative"><img src="images/qrcode-wx.jpg" alt="" class="wx-float"></a> 
+           <a href="" class="foot_l relative"><img src="images/qrcode-fwc.jpg" alt="" class="wxe-float"></a>
+        </div>   
+    </div>
+</div>
+   </div>
+   <div class="container-fluid footer_info  hidden-lg hidden-md">
+   <div class="container">
+    <div class="row">
+          <div class="col-sm-12 footer_fl">
+           <span>关注我们 :</span>
+           <a href="" class="foot_t relative"></a>
+           <a href="" class="foot_r relative"><img src="images/qrcode-wx.jpg" alt="" class="wx-float"></a> 
+           <a href="" class="foot_l relative"><img src="images/qrcode-fwc.jpg" alt="" class="wxe-float"></a>
+        </div>  
+        <div class="col-sm-12 foot_bot">
+           <p style="float:left;">© 2005 - 2017 东莞市永盛通信科技有限公司 版权所有 粤ICP备08130115号-1 联系方式：4001-666-888 </p>
+       <a href=""><button type="button" class="btn btn-default btn_b" data-toggle="tooltip" data-placement="top" title="企业名称：CC的蛋糕坊
+法定代表人：蔡才领
+标识状态：已激活 粤工商备E191512001248
+电子标识有效期：2015-12-14～2020-12-16"></button></a>
+        </div> 
+    </div>
+</div>
+   </div>
+<!--   尾部列表结束-->
+</body>
+</html>

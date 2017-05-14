@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<title>CC的个人网站</title>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="你喜欢蛋糕吗?喜欢甜点吗?那就加入我们把" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link rel="stylesheet" href="css/bases.css"  media="all">
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/index.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+<script src="js/jquery.min.js"></script>
+<script src="js/simpleCart.min.js"></script>
+<script src="js/fly.js"></script>
+<!--非常好用的一款购物车插件,它添加的类是动态的,只要在js里面,代码模块化,使用simplecart的时候最外层必须先实现 class="simpleCart_shelfItem"。用面向对象很好理解，先实力化一个模型，然后赋值给每个字段值。-->
+<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/angular-route.js"></script>
+</head>
+<body ng-controller="cont">
+<div class="wrap" ng-view>   
+</div>
+	<script>
+    var app=angular.module("myApp",['ngRoute'],routes);
+       function routes($routeProvider){
+           $routeProvider
+           .when('/',{
+               templateUrl:"goods.html",
+           })
+           .when('/shp',{
+               templateUrl:"shopping.html",
+           })
+           .otherwise({
+               //没有这个路由的时候显示
+               template:"<h1>什么都木有把</h1>"
+           })
+       };
+//        console.log(1);
+    app.controller("cont",function($scope,$http){
+//               console.log(2);
+
+        $http.get('php/index.php').success(function(msg){
+            
+//            console.log(3);
+            $scope.data=msg;
+//            console.log(msg);
+            
+            angular.forEach($scope.data,function(item){
+                item.num=0;
+            })
+            
+        });
+        
+        
+        
+        $scope.shp=[];
+        console.log($scope.shp)
+        $scope.add=function(id,bool){
+            console.log(1);
+            angular.forEach($scope.data,function(item,index){
+                if(id==item.id){
+                    console.log(1);
+                    if(bool){
+                        if(item.num==0){
+                            item.num=1;
+//                            setIco(event,item.img);
+                     $scope.shp.push(item);
+                        }else{
+                            item.num++;
+//                            setIco(event,item.img);
+                        }
+                    }else{
+                        item.num--;
+                        item.num=item.num<=0?0:item.num;
+                    }
+                }
+            })
+        }
+//        $scope.remove=function(id,bool){
+//            angular.forEach($scope.cart,function(item,index){
+//                if(id==item.id){
+//                    $scope.cart.splice(index,1);
+////                    item.num=0;
+//                }
+//            })
+//        }
+        $scope.$watch("shp",function(){
+            console.log(1);
+            $scope.totalPrice=0;
+            angular.forEach($scope.shp,function(item,index){
+                $scope.totalPrice+=item.num*item.price;
+                if(item.num<=0){
+                    $scope.shp.splice(index,1);
+                }
+            })
+        },true);
+    })
+    </script> 
+	<!--//gallery-->
+	<!--subscribe-->
+	
+    <script>
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+        $('.btn_img').on('click',function(e) {
+    e.preventDefault();
+    if (!$(this).hasClass("opena")) {
+         $('.btn_img').addClass("opena");
+      $('.menu').show();
+    }else{
+       $('.btn_img').removeClass("opena");
+      $('.menu').hide();
+    }
+    return false;
+  });
+})  
+
+    </script>
+<!--
+    <script>
+    var aBtn=document.querySelectorAll("button");
+	
+	// for(var i=0;i<aBtn.length;i++){
+	// 	aBtn[i].onclick=function(){
+	// 		addProduct(event);
+	// 	};
+	// }
+		function setIco(event,imgse) {
+
+            // 变量区,当前按钮,当前图片
+		
+				var flyer = $('<img class="u-flyer" src="+imgse+">');
+
+			
+            //鼠标在页面点击开始位置计算.
+			var top = $(window).scrollTop();
+			
+			var dh = event.pageY;
+
+			var newh = dh - top;
+
+
+			// 鼠标结束位置计算	
+			var oDiv = $('#end').offset();
+			var newdh = oDiv.top - top;
+			flyer.fly({
+				start: {
+					left: event.pageX,
+					top: newh
+				},
+				end: {
+					left: oDiv.left,
+					top: newdh,
+					width: 10,
+					height: 10
+				}
+			});
+		}
+    </script>
+-->
+</body>
+</html>
